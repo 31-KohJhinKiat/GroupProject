@@ -5,6 +5,7 @@ using UnityEngine;
 public class AsteroidScript : MonoBehaviour
 {
     public int enemySpeed;
+    public GameObject Explosion;
 
     // Start is called before the first frame update
     void Start()
@@ -31,4 +32,9 @@ public class AsteroidScript : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        GameObject TempExplosion = Instantiate(Explosion, transform.position, transform.rotation);
+        Destroy(TempExplosion, 0.5f);
+    }
 }
