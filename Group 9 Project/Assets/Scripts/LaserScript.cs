@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidScript : MonoBehaviour
+public class LaserScript : MonoBehaviour
 {
-    public int enemySpeed;
+    public int laserSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -15,8 +15,8 @@ public class AsteroidScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.down * Time.deltaTime * enemySpeed);
-        if (transform.position.y < -10)
+        transform.Translate(Vector3.up * Time.deltaTime * laserSpeed);
+        if (transform.position.y > 10)
         {
             Destroy(gameObject);
         }
@@ -24,11 +24,13 @@ public class AsteroidScript : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("Player"))
+        if (collision.gameObject.tag.Equals("obstacles"))
         {
-            print("collision");
+            print("shot down");
             Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
     }
+
 
 }

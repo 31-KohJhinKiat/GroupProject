@@ -9,6 +9,7 @@ public class PlayerScript : MonoBehaviour
 
     //shoot laser
     public bool canShoot = true;
+    public GameObject laser;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) && canShoot)
         {
-            //shoot laser
+            laser = Instantiate(laser);
         }
 
         if (Input.GetKey(KeyCode.LeftArrow) || transform.position.x >= 10)
