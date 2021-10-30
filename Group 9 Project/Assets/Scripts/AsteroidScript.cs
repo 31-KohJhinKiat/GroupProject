@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class AsteroidScript : MonoBehaviour
 {
+    //enemy speed
     public int enemySpeed;
+
+    //enemy health
+    public int enemyHealth;
+
+    //enemy explosion
     public GameObject Explosion;
 
     // Start is called before the first frame update
@@ -16,7 +22,7 @@ public class AsteroidScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.down * Time.deltaTime * enemySpeed);
+        transform.position -= transform.up * enemySpeed * Time.deltaTime;
         if (transform.position.y < -10)
         {
             Destroy(gameObject);
@@ -25,10 +31,25 @@ public class AsteroidScript : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+       
         if (collision.gameObject.tag.Equals("Player"))
         {
             print("collision");
             Destroy(gameObject);
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("projectile"))
+        {
+            print("shot");
+            enemyHealth--;
+            if (enemyHealth <= 0)
+            {
+                Destroy(gameObject);
+            }
+            Destroy(collision.gameObject);
         }
     }
 

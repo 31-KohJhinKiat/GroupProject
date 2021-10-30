@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserScript : MonoBehaviour
+public class background : MonoBehaviour
 {
-    public int laserSpeed;
+    public float BG_speed;
 
     // Start is called before the first frame update
     void Start()
@@ -15,14 +15,11 @@ public class LaserScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.up * Time.deltaTime * laserSpeed);
-        if (transform.position.y > 10)
+        if (transform.position.y <= -14)
         {
-            Destroy(gameObject);
+            transform.position = new Vector3(0, 14, 0);
         }
+
+        transform.position -= transform.up * BG_speed * Time.deltaTime;
     }
-
-    
-
-
 }

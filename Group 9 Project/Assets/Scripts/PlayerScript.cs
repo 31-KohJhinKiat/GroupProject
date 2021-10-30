@@ -9,6 +9,8 @@ public class PlayerScript : MonoBehaviour
 
     //shoot laser
     public bool canShoot = true;
+    private float waitTime = 0.1f;
+    private float currentTime = 0.0f;
     public GameObject laser;
 
     // Start is called before the first frame update
@@ -20,9 +22,22 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space) && canShoot)
+
+        currentTime = currentTime + Time.deltaTime;
+
+        if (Input.GetKey(KeyCode.Space) && canShoot )
         {
-            Instantiate(laser, transform.position, transform.rotation);
+            
+            if(currentTime >= waitTime)
+            {
+                Vector2 newposition = 
+                    new Vector2(transform.position.x, 
+                    transform.position.y + 0.8f);
+                Instantiate(laser, newposition,
+                    transform.rotation);
+                currentTime = 0;
+            }
+            
         }
 
         if (Input.GetKey(KeyCode.LeftArrow) || transform.position.x >= 10)
