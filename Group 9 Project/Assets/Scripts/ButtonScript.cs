@@ -28,4 +28,19 @@ public class ButtonScript : MonoBehaviour
         SceneManager.LoadScene("MenuScene");
     }
 
+    public void playButton()
+    {
+        SceneManager.LoadScene("Level 1");
+    }
+
+    public void instructionsButton()
+    {
+        SceneManager.LoadScene("InstructionScene");
+    }
+
+    public void creditsButton()
+    {
+        SceneManager.LoadScene("CreditScene");
+    }
+
 }
