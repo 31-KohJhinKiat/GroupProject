@@ -79,6 +79,7 @@ public class PlayerScript : MonoBehaviour
                 playerHealth -= 20;
             }
 
+            GameManager.instance.Explosion();
             GameManager.instance.UpdateHealthBar(playerHealth);
             GameObject TempExplosion = Instantiate(Explosion, transform.position, transform.rotation);
             Destroy(TempExplosion, 0.5f);
