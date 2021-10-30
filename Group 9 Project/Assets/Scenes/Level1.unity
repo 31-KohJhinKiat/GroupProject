@@ -926,7 +926,7 @@ PrefabInstance:
     - target: {fileID: 5486593747081793850, guid: f19566357de87084f8ab0304195eae7d,
         type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: PlayerUI
       objectReference: {fileID: 0}
     - target: {fileID: 5486593747081793854, guid: f19566357de87084f8ab0304195eae7d,
         type: 3}

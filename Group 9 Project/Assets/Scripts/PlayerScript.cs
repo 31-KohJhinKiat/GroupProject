@@ -21,6 +21,7 @@ public class PlayerScript : MonoBehaviour
     //audio
     private AudioSource audioSource;
     public AudioClip laserSound;
+    public AudioClip healSound;
 
     // Start is called before the first frame update
     void Start()
