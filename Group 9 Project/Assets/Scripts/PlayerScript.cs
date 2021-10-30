@@ -74,9 +74,9 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(other.gameObject.tag.Equals("heal"))
+        if(collision.gameObject.tag.Equals("heal"))
         {
             print("heal");
             playerHealth += 20;
