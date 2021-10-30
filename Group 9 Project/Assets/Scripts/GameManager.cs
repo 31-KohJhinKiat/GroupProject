@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     private float elapsedGameTime;
     public Text TimerText;
 
+    //enemy explosion
+    //public GameObject explosionEffect;
+
     //audio
     private AudioSource audioSource;
     public AudioClip explosionSound;
