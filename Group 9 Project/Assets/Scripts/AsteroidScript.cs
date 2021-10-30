@@ -37,7 +37,7 @@ public class AsteroidScript : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("projectile"))
         {
-            print("shot");
+            print("shot down");
             enemyHealth--;
             if (enemyHealth <= 0)
             {
