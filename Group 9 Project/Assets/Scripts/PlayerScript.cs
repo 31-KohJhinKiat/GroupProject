@@ -87,7 +87,7 @@ public class PlayerScript : MonoBehaviour
                 playerHealth = 100;
             }
 
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 
