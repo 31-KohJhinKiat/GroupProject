@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     //audio
     private AudioSource audioSource;
-    
+    public AudioClip explosionSound;
 
     // Start is called before the first frame update
     void Start()
@@ -66,6 +66,11 @@ public class GameManager : MonoBehaviour
     {
         scoreValue = scoreValue + score ;
         ScoreText.GetComponent<Text>().text = "Score: " + scoreValue;
+    }
+
+    public void Explosion()
+    {
+        audioSource.PlayOneShot(explosionSound);
     }
 
     // For time text

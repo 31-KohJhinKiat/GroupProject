@@ -7,6 +7,8 @@ public class SpawnerScript : MonoBehaviour
     //asteroids
     public GameObject SpawnObject1;
     public GameObject SpawnObject2;
+    public GameObject SpawnObject3;
+    public GameObject SpawnObject4;
 
     //y position
     float PositionX;
@@ -28,7 +30,7 @@ public class SpawnerScript : MonoBehaviour
         PositionX = Random.Range(10, -10f);
         this.transform.position = new Vector3(PositionX, transform.position.y , transform.position.z);
         
-        int RandomNumber = Random.Range(0, 2);
+        int RandomNumber = Random.Range(0, 5);
 
         if (RandomNumber == 0)
         {
@@ -39,9 +41,21 @@ public class SpawnerScript : MonoBehaviour
         {
             Instantiate(SpawnObject2, transform.position, transform.rotation);
         }
-        
 
+        else if (RandomNumber == 2)
+        {
+            Instantiate(SpawnObject2, transform.position, transform.rotation);
+        }
 
+        else if (RandomNumber == 3)
+        {
+            Instantiate(SpawnObject3, transform.position, transform.rotation);
+        }
+
+        else if (RandomNumber == 4)
+        {
+            Instantiate(SpawnObject4, transform.position, transform.rotation);
+        }
 
     }
 

@@ -16,10 +16,14 @@ public class PlayerScript : MonoBehaviour
     //health
     public int playerHealth;
 
+    //audio
+    private AudioSource audioSource;
+    public AudioClip laserSound;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,6 +37,7 @@ public class PlayerScript : MonoBehaviour
             
             if(currentTime >= waitTime)
             {
+                audioSource.PlayOneShot(laserSound);
                 Vector2 newposition = 
                     new Vector2(transform.position.x, 
                     transform.position.y + 0.8f);
@@ -66,6 +71,10 @@ public class PlayerScript : MonoBehaviour
             else if (collision.gameObject.name == "Asteroid2(Clone)")
             {
                 playerHealth -= 10;
+            }
+            else if (collision.gameObject.name == "Asteroid3(Clone)")
+            {
+                playerHealth -= 20;
             }
 
             GameManager.instance.UpdateHealthBar(playerHealth);

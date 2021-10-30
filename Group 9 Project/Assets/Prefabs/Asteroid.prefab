@@ -127,6 +127,7 @@ MonoBehaviour:
   Explosion: {fileID: 4626678097065841447, guid: 2b14893167efcf0498503abb456f65f2,
     type: 3}
   enemyScore: 100
+  explosionSound: {fileID: 0}
 --- !u!50 &6298234519914023839
 Rigidbody2D:
   serializedVersion: 4

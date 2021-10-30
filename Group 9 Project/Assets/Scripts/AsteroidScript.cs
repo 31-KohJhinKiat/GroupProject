@@ -16,6 +16,8 @@ public class AsteroidScript : MonoBehaviour
     //enemy score
     public int enemyScore;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +43,7 @@ public class AsteroidScript : MonoBehaviour
             enemyHealth--;
             if (enemyHealth <= 0)
             {
+                GameManager.instance.Explosion();
                 GameManager.instance.addScore(enemyScore);
                 GameObject TempExplosion = Instantiate(Explosion, transform.position, transform.rotation);
                 Destroy(TempExplosion, 0.5f);
