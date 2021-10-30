@@ -11,7 +11,9 @@ public class PlayerScript : MonoBehaviour
     public bool canShoot = true;
     private float waitTime = 0.1f;
     private float currentTime = 0.0f;
+
     public GameObject laser;
+    public GameObject Explosion;
 
     //health
     public int playerHealth;
@@ -78,7 +80,8 @@ public class PlayerScript : MonoBehaviour
             }
 
             GameManager.instance.UpdateHealthBar(playerHealth);
-           
+            GameObject TempExplosion = Instantiate(Explosion, transform.position, transform.rotation);
+            Destroy(TempExplosion, 0.5f);
             Destroy(collision.gameObject);
         }
     }
