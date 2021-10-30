@@ -13,6 +13,9 @@ public class PlayerScript : MonoBehaviour
     private float currentTime = 0.0f;
     public GameObject laser;
 
+    //health
+    public int playerHealth;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,4 +53,42 @@ public class PlayerScript : MonoBehaviour
             transform.position += transform.right * speed * Time.deltaTime;
         }
     }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("obstacles"))
+        {
+ 
+            if(collision.gameObject.name == "Asteroid(Clone)")
+            {
+                playerHealth -= 5;
+            }
+            else if (collision.gameObject.name == "Asteroid2(Clone)")
+            {
+                playerHealth -= 10;
+            }
+
+            GameManager.instance.UpdateHealthBar(playerHealth);
+           
+            Destroy(collision.gameObject);
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.tag.Equals("heal"))
+        {
+            print("heal");
+            playerHealth += 20;
+            GameManager.instance.UpdateHealthBar(playerHealth);
+
+            if (playerHealth > 100)
+            {
+                playerHealth = 100;
+            }
+
+            Destroy(gameObject);
+        }
+    }
+
 }

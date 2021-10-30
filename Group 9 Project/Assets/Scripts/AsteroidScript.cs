@@ -13,6 +13,9 @@ public class AsteroidScript : MonoBehaviour
     //enemy explosion
     public GameObject Explosion;
 
+    //enemy score
+    public int enemyScore;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,15 +32,6 @@ public class AsteroidScript : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-       
-        if (collision.gameObject.tag.Equals("Player"))
-        {
-            print("collision");
-            Destroy(gameObject);
-        }
-    }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -47,6 +41,7 @@ public class AsteroidScript : MonoBehaviour
             enemyHealth--;
             if (enemyHealth <= 0)
             {
+                GameManager.instance.addScore(enemyScore);
                 Destroy(gameObject);
             }
             Destroy(collision.gameObject);
@@ -55,6 +50,8 @@ public class AsteroidScript : MonoBehaviour
 
     private void OnDestroy()
     {
+        print("collision");
+        
         GameObject TempExplosion = Instantiate(Explosion, transform.position, transform.rotation);
         Destroy(TempExplosion, 0.5f);
     }

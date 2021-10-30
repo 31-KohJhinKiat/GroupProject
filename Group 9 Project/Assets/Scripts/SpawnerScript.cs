@@ -9,7 +9,7 @@ public class SpawnerScript : MonoBehaviour
     public GameObject SpawnObject2;
 
     //y position
-    float PositionY;
+    float PositionX;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +25,8 @@ public class SpawnerScript : MonoBehaviour
 
     void SpawnObjects()
     {
-        PositionY = Random.Range(4, -4f);
-        this.transform.position = new Vector3(transform.position.x, PositionY, transform.position.z);
+        PositionX = Random.Range(10, -10f);
+        this.transform.position = new Vector3(PositionX, transform.position.y , transform.position.z);
         
         int RandomNumber = Random.Range(0, 2);
 

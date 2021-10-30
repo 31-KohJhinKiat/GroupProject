@@ -8,6 +8,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    //healthbar
+    public Slider HealthBar;
+
+    //score
+    public int scoreValue;
+    public Text ScoreText;
+
     //timer
     public float levelTime;
     private float elapsedGameTime;
@@ -15,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     //audio
     private AudioSource audioSource;
-    public AudioClip collectSound;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +55,17 @@ public class GameManager : MonoBehaviour
             print("Times up!");
 
         }
+    }
+
+    public void UpdateHealthBar(int health)
+    {
+        HealthBar.GetComponent<Slider>().value = health;
+    }
+
+    public void addScore(int score)
+    {
+        scoreValue = scoreValue + score ;
+        ScoreText.GetComponent<Text>().text = "Score: " + scoreValue;
     }
 
     // For time text
