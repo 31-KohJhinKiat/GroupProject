@@ -22,7 +22,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) && canShoot)
         {
-            laser = Instantiate(laser);
+            Instantiate(laser, transform.position, transform.rotation);
         }
 
         if (Input.GetKey(KeyCode.LeftArrow) || transform.position.x >= 10)
