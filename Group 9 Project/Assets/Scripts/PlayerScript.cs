@@ -87,7 +87,7 @@ public class PlayerScript : MonoBehaviour
                 playerHealth = 100;
             }
 
-            Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
     }
 
