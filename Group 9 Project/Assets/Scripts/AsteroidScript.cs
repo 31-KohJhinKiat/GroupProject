@@ -42,17 +42,11 @@ public class AsteroidScript : MonoBehaviour
             if (enemyHealth <= 0)
             {
                 GameManager.instance.addScore(enemyScore);
+                GameObject TempExplosion = Instantiate(Explosion, transform.position, transform.rotation);
+                Destroy(TempExplosion, 0.5f);
                 Destroy(gameObject);
             }
             Destroy(collision.gameObject);
         }
-    }
-
-    private void OnDestroy()
-    {
-        print("collision");
-        
-        GameObject TempExplosion = Instantiate(Explosion, transform.position, transform.rotation);
-        Destroy(TempExplosion, 0.5f);
     }
 }
