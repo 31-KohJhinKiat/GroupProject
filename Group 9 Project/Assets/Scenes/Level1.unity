@@ -776,6 +776,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4626678097065841447, guid: 2b14893167efcf0498503abb456f65f2,
         type: 3}
+    - target: {fileID: 1705989160539238590, guid: 34b548a7aae67cc4eb08f798def0606e,
+        type: 3}
+      propertyPath: healSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 25611e21cc77cb84b81b4676cc6aef3b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34b548a7aae67cc4eb08f798def0606e, type: 3}
 --- !u!1001 &3112258267598138611

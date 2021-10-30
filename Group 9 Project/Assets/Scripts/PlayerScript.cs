@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -69,11 +70,11 @@ public class PlayerScript : MonoBehaviour
  
             if(collision.gameObject.name == "Asteroid(Clone)")
             {
-                playerHealth -= 5;
+                playerHealth -= 10;
             }
             else if (collision.gameObject.name == "Asteroid2(Clone)")
             {
-                playerHealth -= 10;
+                playerHealth -= 30;
             }
             else if (collision.gameObject.name == "Asteroid3(Clone)")
             {
@@ -85,6 +86,12 @@ public class PlayerScript : MonoBehaviour
             GameObject TempExplosion = Instantiate(Explosion, transform.position, transform.rotation);
             Destroy(TempExplosion, 0.5f);
             Destroy(collision.gameObject);
+
+            if (playerHealth <= 0)
+            {
+                SceneManager.LoadScene("LoseScene");
+            }
+
         }
     }
 
@@ -93,6 +100,7 @@ public class PlayerScript : MonoBehaviour
         if(collision.gameObject.tag.Equals("heal"))
         {
             print("heal");
+            audioSource.PlayOneShot(healSound);
             playerHealth += 20;
             GameManager.instance.UpdateHealthBar(playerHealth);
 

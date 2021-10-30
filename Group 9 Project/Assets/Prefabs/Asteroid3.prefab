@@ -143,8 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c92922d1766d5c40873107eee104762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 3
-  enemyHealth: 3
+  enemySpeed: 5
+  enemyHealth: 5
   Explosion: {fileID: 4626678097065841447, guid: 2b14893167efcf0498503abb456f65f2,
     type: 3}
   enemyScore: 200

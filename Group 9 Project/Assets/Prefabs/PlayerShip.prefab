@@ -126,8 +126,10 @@ MonoBehaviour:
   speed: 10
   canShoot: 1
   laser: {fileID: 7945363468295710734, guid: 27229c428add0ab41917346c3966bf8c, type: 3}
+  Explosion: {fileID: 0}
   playerHealth: 100
   laserSound: {fileID: 8300000, guid: 9034906d2ded74a4ea7f3e9295f769ad, type: 3}
+  healSound: {fileID: 8300000, guid: 25611e21cc77cb84b81b4676cc6aef3b, type: 3}
 --- !u!50 &1705989160539238591
 Rigidbody2D:
   serializedVersion: 4

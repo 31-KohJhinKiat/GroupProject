@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         else
         {
             levelTime = 0;
-            SceneManager.LoadScene("GameOverScene");
+            SceneManager.LoadScene("WinScene");
             print("Times up!");
 
         }

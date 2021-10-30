@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 3
-  enemyHealth: 5
+  enemyHealth: 10
   Explosion: {fileID: 4626678097065841447, guid: 2b14893167efcf0498503abb456f65f2,
     type: 3}
   enemyScore: 300
