@@ -20,7 +20,7 @@ public class ButtonScript : MonoBehaviour
 
     public void restartButton()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level1");
     }
 
     public void menuButton()
@@ -30,7 +30,7 @@ public class ButtonScript : MonoBehaviour
 
     public void playButton()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level1");
     }
 
     public void instructionsButton()

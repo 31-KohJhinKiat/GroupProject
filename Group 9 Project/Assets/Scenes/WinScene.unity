@@ -799,10 +799,35 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6241361417554900897, guid: 783661704329ffd449562382f1106fb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1353372873948452584}
+    - target: {fileID: 6241361417554900897, guid: 783661704329ffd449562382f1106fb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: restartButton
+      objectReference: {fileID: 0}
     - target: {fileID: 6241361417900819239, guid: 783661704329ffd449562382f1106fb7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1353372873948452584}
+    - target: {fileID: 6241361417900819239, guid: 783661704329ffd449562382f1106fb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: creditsButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241361418243466422, guid: 783661704329ffd449562382f1106fb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1353372873948452584}
+    - target: {fileID: 6241361418243466422, guid: 783661704329ffd449562382f1106fb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: menuButton
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 783661704329ffd449562382f1106fb7, type: 3}

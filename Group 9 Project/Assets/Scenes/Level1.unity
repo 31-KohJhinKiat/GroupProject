@@ -1127,6 +1127,11 @@ PrefabInstance:
       propertyPath: TimerText
       value: 
       objectReference: {fileID: 847364791}
+    - target: {fileID: 8141650581392028507, guid: 59369dbbf3e895f488f8787d9535892c,
+        type: 3}
+      propertyPath: levelTime
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 8141650581392028517, guid: 59369dbbf3e895f488f8787d9535892c,
         type: 3}
       propertyPath: m_Name

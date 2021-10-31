@@ -278,6 +278,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &549345657 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1353372872867596849, guid: a182214d109be2b43a2597eaf0fe6da0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1589687843}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e011f3f9c19e064f903ea42ac839b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &754473065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -725,6 +737,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241361417554900897, guid: 783661704329ffd449562382f1106fb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 549345657}
+    - target: {fileID: 6241361417554900897, guid: 783661704329ffd449562382f1106fb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: restartButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241361417900819239, guid: 783661704329ffd449562382f1106fb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 549345657}
+    - target: {fileID: 6241361417900819239, guid: 783661704329ffd449562382f1106fb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: creditsButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241361418243466422, guid: 783661704329ffd449562382f1106fb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 549345657}
+    - target: {fileID: 6241361418243466422, guid: 783661704329ffd449562382f1106fb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: menuButton
       objectReference: {fileID: 0}
     - target: {fileID: 6241361418342311426, guid: 783661704329ffd449562382f1106fb7,
         type: 3}
