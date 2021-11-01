@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     public Text TimerText;
 
     //enemy explosion
-    //public GameObject explosionEffect;
+    public GameObject ExplosionEffect;
 
     //audio
     private AudioSource audioSource;
@@ -49,7 +49,8 @@ public class GameManager : MonoBehaviour
         if (levelTime > 0)
         {
             levelTime -= Time.deltaTime;
-            TimerText.GetComponent<Text>().text = "Time left: " + FormatTime(levelTime);
+            TimerText.GetComponent<Text>().text = 
+                "Time left: " + FormatTime(levelTime);
         }
         else
         {
@@ -68,12 +69,17 @@ public class GameManager : MonoBehaviour
     public void addScore(int score)
     {
         scoreValue = scoreValue + score ;
-        ScoreText.GetComponent<Text>().text = "Score: " + scoreValue;
+        ScoreText.GetComponent<Text>().text = 
+            "Score: " + scoreValue;
     }
 
     public void Explosion()
     {
         audioSource.PlayOneShot(explosionSound);
+        GameObject TempExplosion = Instantiate(ExplosionEffect,
+                   transform.position, transform.rotation);
+        Destroy(TempExplosion, 0.5f);
+        Destroy(gameObject);
     }
 
     // For time text
@@ -89,7 +95,9 @@ public class GameManager : MonoBehaviour
         int seconds = intTime % 60;
         float fraction = time * 1000;
         fraction = (fraction % 1000);
-        string timerText = System.String.Format("{0:00}:{1:00}:{2:000}", minutes, seconds, fraction);
+        string timerText = 
+            System.String.Format("{0:00}:{1:00}:{2:000}", 
+            minutes, seconds, fraction);
         return timerText;
     }
 

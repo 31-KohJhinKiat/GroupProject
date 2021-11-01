@@ -15,14 +15,12 @@ public class LaserScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.up * Time.deltaTime * laserSpeed);
+        transform.Translate(Vector3.up * 
+            Time.deltaTime * laserSpeed);
         if (transform.position.y > 10)
         {
             Destroy(gameObject);
         }
     }
-
-    
-
 
 }

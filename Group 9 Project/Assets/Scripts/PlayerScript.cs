@@ -83,10 +83,7 @@ public class PlayerScript : MonoBehaviour
 
             GameManager.instance.Explosion();
             GameManager.instance.UpdateHealthBar(playerHealth);
-            GameObject TempExplosion = Instantiate(Explosion, transform.position, transform.rotation);
-            Destroy(TempExplosion, 0.5f);
-            Destroy(collision.gameObject);
-
+            
             if (playerHealth <= 0)
             {
                 SceneManager.LoadScene("LoseScene");

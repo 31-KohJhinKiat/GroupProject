@@ -18,10 +18,13 @@ public class CreditScript : MonoBehaviour
     {
         if (transform.position.y >= 800)
         {
-            transform.position = new Vector3(Screen.width / 2, -600, 0);
+            transform.position = 
+                new Vector3(Screen.width / 2, -600, 0);
         }
 
 
-        transform.position = transform.position + new Vector3(0, creditSpeed * Time.deltaTime, 0);
+        transform.position = 
+            transform.position + 
+            new Vector3(0, creditSpeed * Time.deltaTime, 0);
     }
 }

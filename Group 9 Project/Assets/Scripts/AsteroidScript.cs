@@ -9,15 +9,10 @@ public class AsteroidScript : MonoBehaviour
 
     //enemy health
     public int enemyHealth;
-
-    //enemy explosion
-    public GameObject Explosion;
-
+    
     //enemy score
     public int enemyScore;
-
     
-
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +22,8 @@ public class AsteroidScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position -= transform.up * enemySpeed * Time.deltaTime;
+        transform.position -= 
+            transform.up * enemySpeed * Time.deltaTime;
         if (transform.position.y < -10)
         {
             Destroy(gameObject);
@@ -45,9 +41,7 @@ public class AsteroidScript : MonoBehaviour
             {
                 GameManager.instance.Explosion();
                 GameManager.instance.addScore(enemyScore);
-                GameObject TempExplosion = Instantiate(Explosion, transform.position, transform.rotation);
-                Destroy(TempExplosion, 0.5f);
-                Destroy(gameObject);
+               
             }
             Destroy(collision.gameObject);
         }

@@ -28,7 +28,8 @@ public class SpawnerScript : MonoBehaviour
     void SpawnObjects()
     {
         PositionX = Random.Range(10, -10f);
-        this.transform.position = new Vector3(PositionX, transform.position.y , transform.position.z);
+        this.transform.position = new Vector3(PositionX, 
+            transform.position.y , transform.position.z);
         
         int RandomNumber = Random.Range(0, 5);
 

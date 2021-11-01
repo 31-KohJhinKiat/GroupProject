@@ -925,13 +925,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Game is made with Unity and Adobe Photoshop\n\nArt assets: Nufail, Bryan
-    Tay\n\nCoding: Koh Jhin Kiat, Bryan Tay\n\nDebugging: Koh Jhin Kiat, Bryan Tay\n\nLink
-    to music: https://incompetech.com/music/   \r\n\r\nLink to sound effects: https://www.videvo.net/royalty-free-sound-effects/
-    \r\n\r\nLink to more sound effects: https://www.zapsplat.com/sound-effect-categories/
-    \r\n\r\nLink to art assets: https://opengameart.org/ \r\n\r\nLink to more background:
-    https://www.pxfuel.com/en/search?q=spaceship \r\n\r\nLink for mp3 to wav converter:
-    https://online-audio-converter.com/   \r\n\r\nFont link: https://www.fontspace.com/category/futuristic "
+  m_Text: "Game is made with Unity and Adobe Photoshop\n\nArt assets: Mohammad Nufail
+    B A, Bryan Tay\n\nCoding: Koh Jhin Kiat, Bryan Tay\n\nDebugging: Koh Jhin Kiat,
+    Bryan Tay\n\nLink to music: https://incompetech.com/music/   \r\n\r\nLink to
+    sound effects: https://www.videvo.net/royalty-free-sound-effects/ \r\n\r\nLink
+    to more sound effects: https://www.zapsplat.com/sound-effect-categories/ \r\n\r\nLink
+    to art assets: https://opengameart.org/ \r\n\r\nLink to more background: https://www.pxfuel.com/en/search?q=spaceship
+    \r\n\r\nLink for mp3 to wav converter: https://online-audio-converter.com/  
+    \r\n\r\nFont link: https://www.fontspace.com/category/futuristic "
 --- !u!222 &1982499417
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class background : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class background : MonoBehaviour
             transform.position = new Vector3(0, 10, 0);
         }
 
-        transform.position -= transform.up * BG_speed * Time.deltaTime;
+        transform.position -= 
+            transform.up * BG_speed * Time.deltaTime;
     }
 }

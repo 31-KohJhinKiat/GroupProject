@@ -15,7 +15,8 @@ public class GreenOrb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position -= transform.up * GreenOrbSpeed * Time.deltaTime;
+        transform.position -= 
+            transform.up * GreenOrbSpeed * Time.deltaTime;
         if (transform.position.y < -10)
         {
             Destroy(gameObject);
