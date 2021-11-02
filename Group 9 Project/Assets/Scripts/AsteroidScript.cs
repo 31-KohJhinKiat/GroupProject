@@ -9,9 +9,7 @@ public class AsteroidScript : MonoBehaviour
 
     //enemy health
     public int enemyHealth;
-
     
-
     //enemy score
     public int enemyScore;
     
