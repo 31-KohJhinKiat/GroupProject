@@ -58,22 +58,26 @@ namespace Tests
             GameObject spawnObject = spawn.SpawnObjects();
             //1
             spawnObject.transform.position = player.transform.position;
-            player.playerHealth = 40;
+            player.playerHealth = 50;
             //2
             yield return new WaitForSeconds(0.1f);
 
             //3
             if(spawnObject.tag == "obstacles")
             {
-                Assert.True(player.playerHealth < 40);
+                Assert.True(player.playerHealth < 50);
             }
             else
             {
-                Assert.True(player.playerHealth > 40);
+                Assert.True(player.playerHealth > 50);
             }
 
             Object.Destroy(game.gameObject);
         }
+
+        
+
+        
 
     }
 }
