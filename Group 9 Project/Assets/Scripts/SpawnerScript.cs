@@ -25,39 +25,39 @@ public class SpawnerScript : MonoBehaviour
         
     }
 
-    void SpawnObjects()
+    public GameObject SpawnObjects()
     {
         PositionX = Random.Range(10, -10f);
         this.transform.position = new Vector3(PositionX, 
             transform.position.y , transform.position.z);
         
-        int RandomNumber = Random.Range(0, 5);
-
-        if (RandomNumber == 0)
+        int random = Random.Range(1, 5);
+        GameObject asteroid;
+        switch (random)
         {
-            Instantiate(SpawnObject1, transform.position, transform.rotation);
+            case 1:
+                asteroid = Instantiate(SpawnObject1, 
+                    transform.position, transform.rotation);
+                break;
+            case 2:
+                asteroid = Instantiate(SpawnObject2,
+                    transform.position, transform.rotation);
+                break;
+            case 3:
+                asteroid = Instantiate(SpawnObject3,
+                    transform.position, transform.rotation);
+                break;
+            case 4:
+                asteroid = Instantiate(SpawnObject4,
+                    transform.position, transform.rotation);
+                break;
+            default:
+                asteroid = Instantiate(SpawnObject1,
+                    transform.position, transform.rotation);
+                break;
         }
 
-        else if (RandomNumber == 1)
-        {
-            Instantiate(SpawnObject2, transform.position, transform.rotation);
-        }
-
-        else if (RandomNumber == 2)
-        {
-            Instantiate(SpawnObject2, transform.position, transform.rotation);
-        }
-
-        else if (RandomNumber == 3)
-        {
-            Instantiate(SpawnObject3, transform.position, transform.rotation);
-        }
-
-        else if (RandomNumber == 4)
-        {
-            Instantiate(SpawnObject4, transform.position, transform.rotation);
-        }
-
+        return asteroid;
     }
 
 }

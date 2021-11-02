@@ -9,7 +9,9 @@ public class AsteroidScript : MonoBehaviour
 
     //enemy health
     public int enemyHealth;
+
     
+
     //enemy score
     public int enemyScore;
     
@@ -39,11 +41,13 @@ public class AsteroidScript : MonoBehaviour
             enemyHealth--;
             if (enemyHealth <= 0)
             {
-                GameManager.instance.Explosion();
+                GameManager.instance.Explosion(gameObject);
                 GameManager.instance.addScore(enemyScore);
-               
+                
             }
+
             Destroy(collision.gameObject);
         }
     }
+
 }

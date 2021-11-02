@@ -81,7 +81,7 @@ public class PlayerScript : MonoBehaviour
                 playerHealth -= 20;
             }
 
-            GameManager.instance.Explosion();
+            GameManager.instance.Explosion(collision.gameObject);
             GameManager.instance.UpdateHealthBar(playerHealth);
             
             if (playerHealth <= 0)
@@ -100,7 +100,7 @@ public class PlayerScript : MonoBehaviour
             audioSource.PlayOneShot(healSound);
             playerHealth += 20;
             GameManager.instance.UpdateHealthBar(playerHealth);
-
+            GameManager.instance.addScore(100);
             if (playerHealth > 100)
             {
                 playerHealth = 100;

@@ -19,13 +19,13 @@ public class GameManager : MonoBehaviour
     public float levelTime;
     private float elapsedGameTime;
     public Text TimerText;
-
-    //enemy explosion
-    public GameObject ExplosionEffect;
-
+    
     //audio
     private AudioSource audioSource;
     public AudioClip explosionSound;
+
+    //enemy explosion
+    public GameObject ExplosionEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -73,13 +73,13 @@ public class GameManager : MonoBehaviour
             "Score: " + scoreValue;
     }
 
-    public void Explosion()
+    public void Explosion(GameObject asteroid)
     {
-        audioSource.PlayOneShot(explosionSound);
         GameObject TempExplosion = Instantiate(ExplosionEffect,
-                   transform.position, transform.rotation);
+           asteroid.transform.position, asteroid.transform.rotation);
         Destroy(TempExplosion, 0.5f);
-        Destroy(gameObject);
+        audioSource.PlayOneShot(explosionSound);
+        Destroy(asteroid);
     }
 
     // For time text
