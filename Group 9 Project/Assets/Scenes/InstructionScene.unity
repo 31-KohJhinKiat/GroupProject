@@ -156,7 +156,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 100}
+  m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &113384902
 MonoBehaviour:
@@ -190,8 +190,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Move left with the left button. Move right with the right button. Press
-    space to shoot. '
+  m_Text: "Move left with the left button. Move right with the right button. Press
+    space to shoot. \n\nDestroy the asteroids to gain some scores and collect the
+    green orb to heal.\n\nIf you lose all of your lives, you lose. If timer is up,
+    you win."
 --- !u!222 &113384903
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -602,7 +604,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 330, y: 120}
+  m_SizeDelta: {x: 520, y: 240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1118295902
 MonoBehaviour:
