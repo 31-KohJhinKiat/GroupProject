@@ -11,6 +11,7 @@ namespace Tests
         private GameManager game;
         private SpawnerScript spawn;
         private PlayerScript player;
+        private LaserScript laser;
 
         [SetUp]
         public void Setup()
@@ -24,10 +25,16 @@ namespace Tests
             GameObject shipGameObject =
                MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/PlayerShip"));
 
+            GameObject laserGameObject =
+               MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/laser"));
+
             game = gameGameObject.GetComponent<GameManager>();
             player = shipGameObject.GetComponent<PlayerScript>();
             spawn = spawnGameObject.GetComponent<SpawnerScript>();
+            laser = spawnGameObject.GetComponent<LaserScript>();
         }
+
+        
 
         [TearDown]
         public void Teardown()
@@ -75,9 +82,24 @@ namespace Tests
             Object.Destroy(game.gameObject);
         }
 
-        
+        [UnityTest]
+        public IEnumerator LaserMovesUp()
+        {
+            // 1
+            laser.transform.position = player.transform.position;
+            // 2
+            float initialYPos = laser.transform.position.y;
+            yield return new WaitForSeconds(0.1f);
+            // 3
+            Assert.Greater(laser.transform.position.y, initialYPos);
+        }
 
-        
+        [UnityTest]
+        public IEnumerator TestScriptPasses()
+        {
+
+            yield return null;
+        }
 
     }
 }
